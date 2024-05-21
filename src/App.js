@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Upload from './components/Upload';
+import ModelViewer from './components/ModelViewer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className='text-4xl text-center mt-5 font-bold'>3D Models</h1>
+      <div className='grid grid-cols-12 mt-10'>
+      <div className='col-span-3 ms-5 '>
+      <div className='fixed'>
+      <Upload />
+      </div>
+      </div>
+      <div className='col-span-9'>
+      <ModelViewer />
+      </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
