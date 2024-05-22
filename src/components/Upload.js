@@ -17,7 +17,7 @@ const Upload = () => {
     formData.append('model', file);
 
     try {
-      await axios.post('/upload', formData);
+      await axios.post('https://threed-backend-iknx.onrender.com/upload', formData);
       alert('Model uploaded successfully');
     } catch (err) {
       console.error(err);

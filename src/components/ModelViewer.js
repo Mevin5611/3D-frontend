@@ -14,7 +14,7 @@ const ModelViewer = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const res = await axios.get('/models');
+        const res = await axios.get('https://threed-backend-iknx.onrender.com/models');
         setModels(res.data);
       } catch (err) {
         console.error('Error fetching models:', err);
@@ -32,7 +32,7 @@ const ModelViewer = () => {
             <ambientLight intensity={1.5} />
             <pointLight position={[0, 0, 0]} />
             <OrbitControls target={[0, 0, 0]} />
-            <Model path={`http://localhost:5000/${model.model}`} />
+            <Model path={`https://threed-backend-iknx.onrender.com/${model.model}`} />
           </Canvas>
         </div>
       ))}
